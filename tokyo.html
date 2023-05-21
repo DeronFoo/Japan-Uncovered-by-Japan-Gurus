@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Description: Tokyo --> 
+    <!-- Author: Japan Gurus --> 
+    <!-- Date: 14 May 2023 --> 
+    <!-- Validated: Ok 21 May 2023 -->
+<head>
+    <title>Japan Uncovered: Tokyo</title>
+    <meta charset="utf-8"> 
+    <meta name="author" content="Japan Gurus"> 
+    <meta name="description" content="tokyo"> 
+    <meta name="keywords" content="tokyo, japan">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+    <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+    the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>	
+
+<body>
+    <header>
+        <p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+            <!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+                    <li><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select active-dropdown">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li class="active"><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html">Feedback</a>
+        </nav> 
+    </header>
+
+	<article class="content">
+        <h1>Tokyo</h1>
+        <div class="slide-show">
+            <!--This div stores elements to be shown in slideshow-->
+            <div class="slide-show-elements">
+                <!--This div stores progress bar above the slideshow to show the currently showed picture's sequence -->
+                <div class="progress-bar">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <!--This div stores the previous & next buttons -->
+                <div class="navigation">
+                    <button class="slide-previous" onclick="Slideshow(-1)">&#10094;</button>
+                    <button class="slide-next" onclick="Slideshow(+1)">&#10095;</button>
+                </div>
+                <img src="images/tokyo/tokyo.jpg" class="slideshow" alt="Picture 1 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/thumb/destination_tokyo.jpg -->
+                <img src="images/tokyo/akihabara_electric_town.jpg" class="slideshow" alt="Picture 2 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3003_01.jpg -->
+                <img src="images/tokyo/shibuya_station.jpg" class="slideshow" alt="Picture 3 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3007_01.jpg -->
+                <img src="images/tokyo/tokyo_tower.jpg" class="slideshow" alt="Picture 4 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3009_01.jpg -->
+            </div>
+        </div>
+        <div class=" slides content-one">
+            <div class="full">
+                <h2>Introduction</h2>
+                <p>The most populous city in the world and the capital of Japan is Tokyo. It is also one of Japan's 47 prefectures and is made up of numerous cities, towns, and villages west of the city centre in addition to 23 central city wards. Tokyo includes the islands of Izu and Ogasawara as well.<br><br>
+                Tokyo was known as Edo until 1868. When Tokugawa Ieyasu established his feudal administration in Edo in 1603—then a small castle town—the city became Japan's political hub. Edo has become one of the biggest cities in the world a few decades later. Following the Meiji Restoration in 1868, the emperor and the nation's capital were transferred from Kyoto to Edo, now known as Tokyo (or the "Eastern Capital"). The Great Kanto Earthquake of 1923 and the air raids left large portions of Tokyo in ruins.
+            </p><br><br>
+            <!-- information paraphrased from https://www.japan-guide.com/e/e2164.html -->
+          </div>
+          <div class="full">
+                <div class="half">
+                    <h2>Akihabara</h2>
+                    <p>
+                        The central Tokyo neighbourhood of Akihabara, also known as Akiba after a previous local temple, is well known for its abundance of electronics stores and has come to be known as the hub of the otaku (die-hard fan) culture in Japan. The district's electronic stores are home to a wide variety of stores and establishments that specialise in anime and manga. Chuo Dori, the district's principal thoroughfare, is blocked to automobile traffic on Sundays from 13:00 to 18:00 (until 17:00 from October through March).<br><br>
+                        Over the past few years, Akihabara has undergone substantial expansion, which has added some huge, contemporary structures to the mix of small to medium-sized shops and structures. One of these, a sizable Yodobashi electronics store right next to the station, is the most noticeable.
+                    </p><br><br>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e3003.html -->
+                </div>
+                <div class="half2">
+                    <img height="350" src="images/tokyo/akihabara_electric_town.jpg" alt="akihabara electric town">
+                    <!-- image obtained from https://www.japan-guide.com/g18/3003_01.jpg -->
+                </div>
+            </div>
+        </div>
+        <div class=" slides content-two">
+            <div class="full">
+                <div class="half">
+                <h2>Shibuya</h2>
+                <p>
+                    Shibuya is one of Tokyo's 23 city wards, but most people only think of the bustling shopping and entertainment district near Shibuya Station when they hear the name. In this sense, Shibuya is one of Tokyo's busiest and most vibrant neighbourhoods, filled with restaurants, nightclubs, and shops that cater to the throngs of tourists who visit the area every day.<br><br>
+                    Many of Japan's entertainment and fashion trends were first seen on the sidewalks of Shibuya, a hub for youth fashion and culture. Around the neighbourhood, there are numerous malls and department stores that appeal to different types of shoppers. Tokyu or Seibu, two rival companies, are the owners of several of the area's main shopping centres.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/e/e3007.html -->
+                </div>
+                    <div class="half2">
+                    <img height="380" src="images/tokyo/shibuya_station.jpg" alt="shibuya station">
+                    <!-- image obtained from https://www.japan-guide.com/g18/3007_01.jpg -->
+                </div>
+            </div>
+            <div class="full">
+                <h2>Summary</h2>
+                <p>
+                    Visitors to Tokyo have what seems like an endless array of options for dining, entertainment, shopping, and culture. Districts like Asakusa, as well as a number of first-rate museums, ancient temples, and gardens, make it possible to appreciate the city's past. Contrary to popular belief, Tokyo also has a lot of lovely green spots both within easy train rides of the city's centre and on its outskirts.
+                </p>
+                <!-- information paraphrased from https://www.britannica.com/summary/Tokyo -->
+            </div>
+        </div>
+	</article>
+	
+    <footer>
+        <!-- Footer Content -->
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="index.html#outline">Outline</a></li>
+                <li><a href="tokyo.html">Back to Top</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 21 May 2023</p>
+        </div>
+    </footer>
+    <!-- link to external javascript file  -->
+    <script src="script.js"></script> 
+</body>
+</html>	

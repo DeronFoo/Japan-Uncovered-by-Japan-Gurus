@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Description: Kansai --> 
+    <!-- Author: Japan Gurus --> 
+    <!-- Date: 8 May 2023 --> 
+    <!-- Validated: Ok 21 May 2023 -->
+<head>
+    <title>Japan Uncovered: Kansai</title>
+    <meta charset="utf-8"> 
+    <meta name="author" content="Japan Gurus"> 
+    <meta name="description" content="Kansai"> 
+    <meta name="keywords" content="Kansai, japan">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+      <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+      the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>	
+
+<body>
+    <header>
+        <p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+            <!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select active-dropdown">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li class="active"><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+                    <li><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html">Feedback</a>
+        </nav> 
+    </header>
+
+    <article class="content">
+        <h1>Kansai</h1>
+        <div class="slide-show">
+            <!--This div stores elements to be shown in slideshow-->
+            <div class="slide-show-elements">
+                <!--This div stores progress bar above the slideshow to show the currently showed picture's sequence -->
+                <div class="progress-bar">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <!--This div stores the previous & next buttons -->
+                <div class="navigation">
+                    <button class="slide-previous" onclick="Slideshow(-1)">&#10094;</button>
+                    <button class="slide-next" onclick="Slideshow(+1)">&#10095;</button>
+                </div>
+                <img src="images/kansai/kansai1.jpg" class="slideshow" alt="Picture 1 of slideshow">
+                <!-- image obtained from https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2021/02/Kyoto-Japan-old-town-streets-in-the-Higashiyama-district@3x-1024x683.jpg -->
+                <img src="images/kansai/kansai2.jpg" class="slideshow" alt="Picture 2 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3931_top.jpg -->
+                <img src="images/kansai/kansai3.jpg" class="slideshow" alt="Picture 3 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3930_top.jpg -->
+                <img src="images/kansai/kansai4.jpg" class="slideshow" alt="Picture 4 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3974_02.jpg -->
+              </div>
+          </div>
+        <div class=" slides content-one">
+            <div class="full">
+                <h2>Introduction</h2>
+                <p>
+                    Kansai (関西弁) is a region located in the western part of Japan's main island, Honshu. It is a renowned tourist destination recognised for its rich history, traditional culture, and great cuisine. It includes multiple prefectures, including Kyoto, Osaka, and Nara. Kyoto, Japan's former capital, is recognised for its temples and shrines, whereas Osaka is known for its contemporary architecture, bustling commercial areas, and great street cuisine. Some of Japan's oldest and most renowned temples, like the Todai-ji Temple and its famed Great Buddha statue, may be found in Nara. Kansai visitors may participate in a variety of activities, ranging from touring ancient buildings and museums to hiking and cycling in the gorgeous natural surroundings.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/list/e1105.html -->
+            </div>
+            <div class="full">
+                <div class="half2">
+                    <h2>Kansai Destionations</h2>
+                    <ul>
+                        <li>Kyoto
+                            <ul>
+                                <li><a href="https://www.kyoto-tower.jp/en/" target="_blank" title="More details of Kyoto Tower">Kyoto Tower</a></li>
+                                <li><a href="https://www.japan-guide.com/e/e3901.html" target="_blank" title="More details of Kiyomizu-dera Temple">Kiyomizu-dera Temple</a></li>
+                                <li><a href="https://www.tripadvisor.com.my/Attraction_Review-g298564-d321456-Reviews-Fushimi_Inari_taisha_Shrine-Kyoto_Kyoto_Prefecture_Kinki.html" target="_blank" title="More details of Fushimi Inari Shrine">Fushimi Inari Shrine</a></li>
+                            </ul>
+                        </li>
+                        <li>Osaka
+                            <ul>
+                                <li><a href="https://www.klook.com/en-MY/activity/46604-universal-studios-japan-e-ticket-osaka-qr-code-direct-entry/?gclsrc=ds&gclsrc=ds" target="_blank" title="More details of Universal Studios Japan">Universal Studios Japan</a></li>
+                                <li><a href="https://www.japan-guide.com/e/e4000.html" target="_blank" title="More details of Osaka Castle">Osaka Castle</a></li>
+                                <li><a href="https://www.osakastation.com/dotonbori-area-the-bright-heart-of-osaka/" target="_blank" title="More details of Dotonbori Street">Dotonbori Street</a></li>
+                            </ul>
+                        </li>
+                        <li>Nara
+                            <ul>
+                                <li><a href="https://www.japan-guide.com/e/e4100.html" target="_blank" title="More details of Todai-ji Temple">Todai-ji Temple</a></li>
+                                <li><a href="https://www.booking.com/landmark/jp/nara-park.en.html?aid=383259;label=nara-park-c25JcFGP0CJ4*R4k3YP0fgS330211187005:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-2648206141:lp9066658:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YRlijhKLEMjJLyONwTyX95c;ws=&gad=1" target="_blank" title="More details of Nara Park">Nara Park</a></li>
+                                <li><a href="https://www.booking.com/landmark/jp/yoshikien-garden.html?aid=318615;label=Low_CPA_English_EN_MY_21457255225-uRAHYiEtEI69bmOtFV3HNwS637942142339:pl:ta:p1:p2:ac:ap:neg:fi:tidsa-64415617705:lp9066658:li:dec:dm:ag21457255225:cmp339879625;ws=" target="_blank" title="More details of Yoshikien Garden">Yoshikien Garden</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=" slides content-two">
+            <div class="full">
+                <div class="half">
+                    <br><br>
+                    <h2>Nishiki Market</h2>
+                    <p>
+                        Nishiki Market is a five-block-long retail strip with over a hundred businesses and eateries. This vibrant retail market known as "Kyoto's Kitchen" specialises in all food-related goods such as fresh seafood, vegetables, cutlery, and cookware and is a fantastic place to buy seasonal delicacies and Kyoto specialties such as Japanese sweets, pickles, dried fish, and sushi.
+                    </p><br><br>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e3931.html -->
+                </div>
+                <div class="half2">
+                    <img height="320" src="images/kansai/nishiki.jpg" alt="Nishiki Market">
+                    <!-- image obtained from https://res-4.cloudinary.com/jnto/image/upload/w_2064,h_1300,c_fill,f_auto,fl_lossy,q_auto/v1648006915/kyoto/H_00480_001 -->
+                </div>
+            </div>
+            <div class="full">
+                <h2>Summary</h2>
+                <p>
+                    Kansai, which includes the prefectures of Kyoto, Osaka, and Nara, is a famous tourist destination noted for its rich history, traditional culture, and delectable food. Kyoto, Japan's former capital, is recognised for its temples and shrines, whereas Osaka is known for its contemporary architecture, bustling commercial areas, and great street cuisine. Some of Japan's oldest and most prominent temples, like the Todai-ji Temple and its famed Fushimi Inari Shrine, may be found near Nara. Because of its strategic location and excellent transportation infrastructure, Kansai is easily accessible from other areas of Japan. Therefore, Kansai is a must-see destination for anybody interested in learning about Japan's rich history, culture, and natural beauty, as well as its modern comforts and delectable food.
+                </p>
+                <!-- information paraphrased from https://www.tsunagujapan.com/all-about-kansai/ -->
+            </div>
+        </div>
+    </article>
+	
+	<footer>
+        <!-- Footer Content -->
+		<div class="footerNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#goals">Goals</a></li>
+            <li><a href="index.html#outline">Outline</a></li>
+            <li><a href="kansai.html">Back to Top</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+		</div>
+		<div class="footerBottom">
+			<p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 21 May 2023</p>
+		</div>
+	</footer>
+	<!-- link to external javascript file  -->
+	<script src="script.js"></script> 
+</body>
+</html>	

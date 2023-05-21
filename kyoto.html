@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Description: Kyoto --> 
+    <!-- Author: Japan Gurus --> 
+    <!-- Date: 14 May 2023 --> 
+    <!-- Validated: Ok 21 May 2023 -->
+<head>
+    <title>Japan Uncovered: Kyoto</title>
+    <meta charset="utf-8"> 
+    <meta name="author" content="Japan Gurus"> 
+    <meta name="description" content="kyoto"> 
+    <meta name="keywords" content="kyoto, japan">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+    <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+    the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>	
+
+<body>
+	<header>
+		<p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+            <!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+					<li><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select active-dropdown">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li class="active"><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html">Feedback</a>
+        </nav> 
+	</header>
+
+    <article class="content">
+        <h1>Kyoto</h1>
+        <div class="slide-show">
+            <!--This div stores elements to be shown in slideshow-->
+            <div class="slide-show-elements">
+                <!--This div stores progress bar above the slideshow to show the currently showed picture's sequence -->
+                <div class="progress-bar">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <!--This div stores the previous & next buttons -->
+                <div class="navigation">
+                    <button class="slide-previous" onclick="Slideshow(-1)">&#10094;</button>
+                    <button class="slide-next" onclick="Slideshow(+1)">&#10095;</button>
+                </div>
+                <img src="images/kyoto/kyoto.jpg" class="slideshow" alt="Picture 1 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe2158_1680b.jpg -->
+                <img src="images/kyoto/kyoto_station.jpg" class="slideshow" alt="Picture 2 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3922_top.jpg -->
+                <img src="images/kyoto/kyoto_imperial_palace.jpg" class="slideshow" alt="Picture 3 of of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3917_top.jpg -->
+                <img src="images/kyoto/nijo_castle.jpg" class="slideshow" alt="Picture 4 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g18/3918_top.jpg -->
+            </div>
+        </div>
+        <div class=" slides content-one">
+            <div class="full">
+                <h2>Introduction</h2>
+                <p>
+                    From 794 until 1868, Kyoto was both the emperor's home and the capital of Japan. With a population of 1.5 million, it is one of the ten largest cities in the nation and has a contemporary appearance.<br><br>
+                    Kyoto was decimated over the years by numerous battles and fires, but because of its outstanding historic importance, the city was removed from the list of cities to be hit by the atomic bomb and survived World War II. The city still contains countless temples, shrines, and other priceless historical buildings.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/e/e2158.html -->
+            </div>
+            <div class="full">
+                <div class="half">
+                    <h2>Kyoto Station</h2>
+                    <p>
+                        The Kyoto Station building was erected to commemorate the 1200th anniversary of the founding of Kyoto as the nation's capital. It was made available to the public in 1997 and is a stark contrast to how many Western visitors perceive Kyoto to be the centre of traditional Japanese culture.<br><br>
+                        The structure's cutting-edge layout was created by Japanese architect Hara Hiroshi. It makes an effort to portray historical Kyoto using a contemporary aesthetic. The Matrix, the station's spacious main hall with an exposed steel beam canopy, was designed to mimic both the station's architecture and Kyoto's street system's grid pattern. The Osaka Umeda Sky Building was also created by Hara.
+                    </p><br><br>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e3922.html -->
+                </div>
+                <div class="half2">
+                    <img height="350" src="images/kyoto/kyoto_station.jpg" alt="Kyoto Station">
+                    <!-- image obtained from https://www.japan-guide.com/g18/3922_top.jpg -->
+                </div>
+            </div>
+        </div>
+        <div class=" slides content-two">
+            <div class="full">
+                <div class="half">
+                    <h2>Nijo Castle</h2>
+                    <p>
+                        As the Kyoto home of Tokugawa Ieyasu, the first shogun of the Edo Period (1603-1867), Nijo Castles was constructed in 1603. The castle's palace structures were finished by his grandson Iemitsu 23 years later, and he also added a five story castle keep to the property.<br><br>
+                        Nijo Castle was used as an imperial palace for a while following the fall of the Tokugawa Shogunate in 1867 before being given to the city and made accessible to the general public as a historical site. The castle was listed as a UNESCO World Heritage Site in 1994 because of its palace structures, which are undoubtedly the best surviving examples of feudal Japanese castle architecture.
+                    </p><br><br>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e3918.html -->
+                </div>
+                <div class="half2">
+                    <img height="380" src="images/kyoto/nijo_castle.jpg" alt="Nijo Castle">
+                    <!-- image obtained from https://www.japan-guide.com/g18/3918_top.jpg -->
+                </div>
+            </div>
+            <div class="full">
+                <h2>Summary</h2>
+                <p>
+                    Kyoto is committed to upholding Japan's oldest customs while yet being a vibrant, modern city.  Because modern facilities are easily accessible, Kyoto is the ideal place for travellers who want to learn about Japan's past without giving up modern luxuries.  Kyoto is proud to serve traditional Japanese cuisines like sushi, tofu, and obanzi (Kyoto home-style food), and is regarded as a national eating hotspot.  Additionally, a wide range of eateries provide anything from French fare to Korean barbeque.  Shopping in Kyoto is also a distinctive experience, with goods ranging from cutting-edge fashion to traditional Japanese crafts produced by regional craftspeople.  Kyoto is one of Japan's most cherished assets, second only to the most glittering locations on earth.
+                </p><br><br>
+                <!-- information paraphrased from https://www.britannica.com/place/Kyoto-Japan -->
+            </div>
+        </div>
+    </article>
+	
+    <footer>
+        <!-- Footer Content -->
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="index.html#outline">Outline</a></li>
+                <li><a href="kyoto.html">Back to Top</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 21 May 2023</p>
+        </div>
+    </footer>
+    <!-- link to external javascript file  -->
+    <script src="script.js"></script> 
+</body>
+</html>	

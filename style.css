@@ -1,0 +1,856 @@
+/* Import new font */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Tell browser to include any border and padding added in the 
+    width of the element to avoid extra width.*/
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh; 
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex; 
+    justify-content: flex-start; /* align items are from the start line */
+    align-items: center; 
+    z-index: 100;
+    flex-wrap: wrap; /* set flex items to wrap onto multiple lines */
+}
+
+/* Styles for Japan Uncovered Logo */
+header p img {
+    position: relative;
+    width: 32%;
+    left: -80px;
+    filter: contrast(2) drop-shadow(0 0 0.75rem #FFF0F3) brightness(120%);
+}
+
+/* Navigation Menu Styles */
+nav {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: -15%;
+}
+
+nav a {
+    margin: 1em;
+    text-decoration: none;
+    color: #C9184A;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Styles for links to Homepage and Feedback page (without drop-down function) */
+nav>a:hover, 
+nav>a.active{
+    background-color: #C9184A;
+    color: white;
+}
+
+/* Styles for links to Regions and Destinations pages (with drop-down function) */
+.dropdown {
+    position: relative;
+    margin: 1em;
+    display: inline-flex;
+}
+
+/* Styles for Regions and Destinations nav span */
+.select {
+    color: #C9184A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Styles rendered when Regions or Destinations nav span is active or hover */
+.select:hover,
+.select:active {
+    background-color: #C9184A;
+    color: white;
+}
+
+/* Styles rendered when div with 'class=select' is clicked (view script.js) */
+.select-clicked {
+    background-color: #C9184A;
+    color: white;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Styles for caret indicating a drop-down menu (Regions and Destinations) */
+.caret {
+    margin-left: .5em;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #C9184A;
+    transition: 0.3s;
+}
+
+/* Styles rendered to the caret when div with 'class=select' is clicked (view script.js)*/
+.caret-rotate {
+    transform: rotate(180deg);
+    border-top: 6px solid white;
+}
+
+/* Styles for the options under the drop-down menu (unordered list)*/
+.menu {
+    list-style: none; 
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+    background-color: #C9184A;
+    border-radius: 0 0 20px 20px;
+}
+
+.menu li {
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 6px 3px;
+}
+
+.menu li a {
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    left: -8px;
+    padding: 6px 30%;
+}
+
+/* Styles for the long options under the destinations drop-down menu */
+.menu-long li a {
+    padding: 6px 40%;
+    left: -20px;
+}
+
+.menu li:hover,
+.menu li.active {
+    background: #800F2F;
+}
+
+.active-dropdown {
+    background: #C9184A;
+    color: white;
+}
+
+/* Styles rendered to the caret when div with 'class=select' is clicked (view script.js)*/
+.menu-open {
+    display: block;
+    opacity: 1;
+} 
+
+/* Styles rendered to resize the menu elements when screen width goes below 768px */
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+    }
+    .dropdown, nav a {
+        margin: 0em;
+    }
+    header p img {
+        left: -20px;
+    }
+}
+@media (max-width: 900px) {
+    nav {
+        font-size: 0.8em;
+        text-align: right;
+        margin: -150px 0 0 0; 
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        font-size: 0.55em;
+        margin: -120px 0 0 0;
+    }
+}
+/* ~~ End of Navigation Menu Styles ~~ */
+
+/* Styles for homepage section (Parallax Scrolling Effect) */
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Styles for homepage section images */
+.parallax img {
+    position: absolute;
+    width: 100%;
+    height: 110vh; 
+    pointer-events: none; 
+}
+
+@media (max-width: 1000px) {
+    .parallax img {
+        object-fit: cover; /* Resize images to fit its container upon less than 1000px screen width */
+        object-position: center;
+    }
+}
+
+/* Styles for heading 1 (e.g. Homepage - Experience True Japan) */
+#text, h1 {
+    position: absolute;
+    font-size: max(4vw, 30px); /* Set max font-size for responsive text */
+    color: white;
+    text-shadow: 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,0 0 50px #e60073;
+}
+
+/* Styles for main content (article) */
+article {
+    height: 300vh;
+    width: 100%;
+    background-color:#ffa2a5;
+}
+
+article h2 {
+    font-size: max(3vw, 25px); /* Set max h2 font-size for responsive text */
+    color: white;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+article h3 {
+    font-size: max(2vw, 20px); /* Set max h3 font-size for responsive text */
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+article p {
+    font-size: max(1vw, 10px); /* Set max p font-size for responsive text */
+    color: white;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Styles for each fullscreen content (div slides) */
+.slides {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 9%;
+}
+
+/* Styles for homepage first slide (Website Intro - About) */
+.slide1{
+    background: url(images/homepage/shrine.png) no-repeat, linear-gradient(180deg,#ffa2a5,#FF4D6D);
+    /* image obtained from https://www.freepik.com/free-vector/japanese-torii-gate-painted-by-watercolor_3424215.htm#query=japan%20shrine%20cartoon&position=9&from_view=search&track=ais */
+    background-position:95% 85%;
+    background-size: 34%;
+}
+
+.slide1-content {
+    width: 55%;
+}
+
+@media (max-width: 1000px) {
+    .slide1-content {
+        width: 100%;
+    }
+}
+
+/* Styles for homepage second slide (Website Goals) */
+.slide2 {
+    background:linear-gradient(180deg, #FF4D6D, #A4133C);
+}
+
+.slide2 h3, .slide3 h3 {
+    text-align: center;
+}
+/* Styles for each goal in homepage second slide */
+.goalCol {
+    float: left;
+    width: 33.33%;
+    height: 70vh;
+    padding: 5px;
+}
+
+.goalCol img{
+    margin: 20% 0;
+    width: 80%;
+    filter: drop-shadow(16px 16px 10px black);
+}
+
+.goalCol p{
+    text-align: left;
+    margin-top: 2%;
+    margin-right: 40px;
+}
+
+/* Styles for homepage third slide (Website Outline) */
+.slide3 {
+    background:linear-gradient(180deg, #A4133C, #590D22);
+}
+
+/* Styles for each region/destination card in homepage third slide */
+.card {
+    /* Set max width and height for responsive images */
+    width: max(13%, 110px); 
+    height: 15%;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 15px 5px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    filter: drop-shadow(8px 8px 5px black);
+}
+
+/* Each region/destination card moves up when mouseover */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Styles for the card links to their respective regions/destinations */
+.card a {
+    display: block;
+    width: 160px;
+    height: 180px;
+    padding: 15px 25px;
+    margin: -15px -25px;
+    text-decoration: none;
+}
+
+/* Background images for the each region/destination card */
+.card1 {background-image: url(images/homepage/hokkaido.jpeg); }
+/* image downloaded from https://jw-webmagazine.com/wp-content/uploads/2019/06/jw-5d156359afe697.67154195.jpeg */
+.card2 {background-image: url(images/homepage/tohoku.jpg); }
+/* image downloaded from https://d20aeo683mqd6t.cloudfront.net/articles/title_images/000/026/996/original/img_0-3.jpg?2017&d=750x400 */
+.card3 {background-image: url(images/homepage/kanto.jpg); }
+/* image downloaded from https://a0.cdn.japantravel.com/photo/62130-213321/1440x960!/the-seven-prefectures-of-kanto-213321.jpg */
+.card4 {background-image: url(images/homepage/chubu.jpeg); }
+/* image downloaded from https://d20aeo683mqd6t.cloudfront.net/articles/title_images/000/044/427/medium/pixta_53920795_s.jpeg?2022 */
+.card5 {background-image: url(images/homepage/kansai.jpg); }
+/* image downloaded from https://static.nationalgeographic.co.uk/files/styles/image_3200/public/kansai_wakayama_162_hr_web.jpg?w=1190&h=794 */
+.card6 {background-image: url(images/homepage/chugoku.jpeg); }
+/* image downloaded from https://onecms-res.cloudinary.com/image/upload/s--u3v9e-GU--/f_auto,q_auto/c_fill,g_auto,h_622,w_830/v1/tdy-migration/31222935.JPG?itok=jYD49GAK*/
+.card7 {background-image: url(images/homepage/chikoku.jpeg); }
+/* image downloaded from https://www-tc.pbs.org/wgbh/sacredjourneys/media/images/shikoku_temple_2_430x242.jpg */
+.card8 {background-image: url(images/homepage/kyushu.jpeg); }
+/* image downloaded from https://cdn2.wanderlust.co.uk/media/1011/dreamstime_xl_112818278-lead.jpg?anchor=center&mode=crop&width=1200&height=0&rnd=131820033580000000 */
+.card9 {background-image: url(images/homepage/tokyo.jpg); }
+/* image downloaded from https://i.pinimg.com/originals/f6/40/9b/f6409bd16c40e2af3d6b0480350bb096.jpg */
+.card10 {background-image: url(images/homepage/kyoto.jpeg); }
+/* image downloaded from https://d36tnp772eyphs.cloudfront.net/blogs/1/2019/02/Red-Torii-gates-in-Fushimi-Inari-shrine-in-Kyoto-Japan.jpg */
+.card11 {background-image: url(images/homepage/naoshima.jpg); }
+/* image downloaded from https://www.remotelands.com/travelogues/app/uploads/2015/04/Pumpkin_by_Yayoi_Kusama.jpg */
+.card12 {background-image: url(images/homepage/fuji.jpeg); }
+/* image downloaded from https://content.api.news/v3/images/bin/27c78696d27bf5b94cbb31bc06f99114 */
+.card13 {background-image: url(images/homepage/hiroshima.jpg); }
+/* image downloaded from https://lp-cms-production.imgix.net/2019-06/497079645_super.jpg */
+.card14 {background-image: url(images/homepage/osaka.jpeg); }
+/* image downloaded from https://photos.smugmug.com/Osaka/Osaka-Categories/i-J9MFjBv/0/XL/Osaka_Districts-XL.jpg */
+
+/* Styles for heading 4 in each card */
+h4 {
+    color: white;
+    text-shadow: 0 0 20px black;
+}
+
+.card p {
+    text-shadow: 0 0 20px black;
+    font-size: 0.6vw;
+    text-align: left;
+}
+
+/* Resize the cards and labellings inside when screen width is below 1350px and 800px */
+@media (max-width: 1350px) {
+    h4 {
+        font-size: 12px;
+    }
+    .card {
+        height: 130px;
+        margin: 7px;
+    }
+    .card p {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .card {
+        height: 70px;
+        margin: 7px;
+    }
+}
+/* ~~ End of Styles for main content (article) ~~ */
+
+/* Footer Styles */
+footer {
+    background-color: #ffa2a5;
+    width: 100%;
+    height: 10vh;
+    color: white;
+}
+/* Styles for the Japan Gurus Logo on the footer */
+.footerLogo {
+    display: flex;
+    justify-content: center;
+    margin-top: -70px;
+    background: linear-gradient(180deg, #620f26 50%, #ffa2a5 50%);
+}
+
+.footerLogo img {
+    width: max(15%, 100px); /* Set logo on footer responsive */ 
+    background-color: #ffa2a5;
+    border-radius: 50%;
+}
+
+/* Styles for the links on the footer */
+.footerNav {
+    background-color: #ffa2a5;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    opacity: 0.6;
+    margin: 20px;
+    text-decoration: none;
+    font-size: max(1.3vw, 0.8em);
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* Styles for the copyright notice and last updated date on the footer */
+.footerBottom {
+    background-color: #ffa2a5;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-size: max(1.3vw, 0.8em);
+}
+
+.footerBottom p a {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.footerBottom p a:hover {
+    opacity: 1;
+    font-weight: 900;
+}
+
+@media (max-width: 800px) {
+    .footerNav ul li a {
+        margin: 10px;
+    }
+}
+
+/* ~~ End of Footer Styles ~~ */
+
+/* Feedback Form Styles (feedback.html) */
+article.form {
+    height: 165vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Styles for the heading 1 (e.g. Feedback Form, Japan Gurus Group Members) */
+article.form h1, article.members h1 {
+    top: 3%;
+    font-size: max(3vw, 25px); /* Set max font-size for responsive text */
+    margin-top: max(90px, 6%);
+}
+
+form {
+    margin: 200px 5% 0 5%;
+    height: max(63vw, 100vh);
+    background-color: #FFCCD5;
+    border: 1px solid #590D22;
+    border-radius: 10px;
+    filter: drop-shadow(3px 3px 5px #590D22);
+}
+
+legend {
+    color:  #590D22;
+    font-size: max(1.2vw, 12px);
+    font-weight: bold;
+}
+
+fieldset{
+	border: 3px solid #C9184A;
+	border-spacing: 5px;
+	padding: 1vw;
+    margin: 1vw;
+}
+
+.qs{
+	width: 500px;
+}
+
+.ans{
+	width: 400px;
+    background-color: #FF8FA3;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    transform: scale(1.5);
+    margin: 0 6px;
+}
+
+input{
+    font-size: max(1vw, 10px);
+}
+
+textarea{
+	resize: none;
+}
+
+/* Styles for the submit and reset button of feedback form */
+form p {
+    text-align: center;
+}
+
+input:focus , textarea:focus {
+    outline-color: #C9184A;
+}
+
+textarea, input[type=text], input[type=email], input[type=range], select {
+    width: 95%;
+}
+
+input[type=submit], input[type=reset] {    
+	background-color: #C9184A;    
+	color: white;    
+	padding: 1% 4%;
+    width: 20%;    
+	border: none;    
+	border-radius: 4px;   
+	cursor: pointer;	
+    margin: 0 4px;
+    font-size: max(1vw, 10px);
+}
+
+input[type=submit]:hover, input[type=reset]:hover{    
+	background-color: #800F2F;    
+}  
+
+@media (max-width: 1000px) {
+    article.form {
+        height: 130vh;
+    }
+}
+
+@media (max-width: 600px) {
+    article.form {
+        height: 125vh;
+    }
+    article.form h1 {
+        top: 1.5%;
+    }
+    form {
+        margin: 150px 5% 0 5%;
+    }
+    input[type="checkbox"], input[type="radio"] {
+        transform: scale(1);
+        margin: 0 1px;
+    }
+}
+
+/* Styles for the table column for answers */
+fieldset table tr td.ans{
+	padding: 0.8vw;
+	border: 3px solid #C9184A;
+    font-size: max(1.1vw, 12px);
+}
+
+/* Styles for the table column for questions */
+fieldset table tr td.qs{
+	background-color: #C9184A;
+	color: white;
+	vertical-align: top;
+	padding: 0.8vw;
+    font-size: max(1.1vw, 12px);
+}
+/* ~~ End of Feedback Form Styles ~~ */
+
+/* Styles for japan_gurus.html (group members' information) */
+article.members {
+    width: 100%;
+    height: 125vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.grid-container{
+    margin: 200px 5% 0 5%;
+    padding-bottom: 100px;
+	display: grid;
+	grid-template-columns: 15% 35% 15% auto;
+}
+
+.grid-item{
+	background-color: #A4133C;
+	text-align: justify;
+	padding: 1.2vw;
+    margin: 0.4vw;
+    height: 350px;
+}
+
+.grid-img{
+	background-color:  #590D22;
+	text-align: justify;
+    padding: 1.2vw;
+    margin:  0.4vw;
+    height: 350px;
+    color: white;
+}
+
+figure img{
+    width: 100%;
+}
+
+figcaption{
+	text-align: center;
+    font-size: max(1.2vw, 10px);
+}
+/* ~~ End of Styles for japan_gurus.html ~~ */
+
+
+/* Styles for Secondary Pages */
+/* Styles for slideshow in secondary pages */
+article.content {
+    width: 100%;
+    height: 310vh;
+    position: relative;
+    display:inline-block;
+    text-align: center;
+}
+
+/* Styles for heading 1 (Name of regions/destinations) */
+article.content h1 {
+    position: relative;
+    font-size: max(3vw, 25px); /* Set max font-size for responsive text */
+    margin-top: max(120px, 6%);
+}
+
+.slide-show {    
+    width: 100%;
+    height: 80vh;
+}
+
+.slide-show-elements {
+	position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.5);
+    border-radius: 1rem;
+    aspect-ratio: 16/7;
+    width: 80%;
+    height: 90%;
+}
+
+/* Styles to ensure slideshow imagea do not stretch when resized */
+.slide-show-elements img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Styles for previous & next button for slideshow*/
+.navigation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-previous,
+.slide-next {
+  width: 5vw;
+  height: 100%;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  opacity: 0.2;
+}
+
+.slide-previous:hover,
+.slide-next:hover {
+  opacity: 0.7;
+}
+
+/*Styles for the progress bar above the picture slideshow*/
+.progress-bar{
+    position: absolute;
+    top: 0;
+    display: flex; 
+    width: 100%;
+}
+
+.bullet{
+    height: 1.2vh;
+    width: 25%;
+    border: none;
+    background-color: transparent;
+}
+
+/*Styles for progress bar of current picture to show*/
+.showing{
+	background-color:#C9184A;
+}
+
+/* Styles for Secondary Page Content After Slideshow */
+.content-one{
+    background: linear-gradient(180deg,#ffa2a5,#FF4D6D);
+    padding: 9% 9% 0 9%;
+}
+
+.content-two{
+    background: linear-gradient(180deg, #FF4D6D, #A4133C);
+    padding: 2.5% 9% 0 9%;
+}
+
+/* Secondary Page Content With Full Width  */
+.full{
+    width: 100%;
+}
+
+/* Secondary Page Content With 60% Width  */
+.half{
+    width: 60%;
+    float: left;
+}
+
+/* Secondary Page Content With 40% Width  */
+.half2{
+    width: 40%;
+    float: left;
+}
+
+.half2 img{
+    width: 90%;
+    float: right;
+    object-fit: cover;
+}
+
+/* Styles for links and lists used in Secondary Pages */
+.full a {
+    color: rgb(209, 209, 255);
+    font-weight: bolder;
+}
+
+.full ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    color: white;
+    font-weight: bolder;
+    font-size: max(1vw, 10px);
+}
+
+/* Show levels of nested list */
+.full ul li {
+    position: relative;
+    text-align: left;
+}
+
+.full ul li ul {
+    list-style-type: disc;
+    text-align: right;
+    margin-left: 1em;
+    padding-left: 2em;
+    font-weight: lighter;
+}
+
+.full ol li {
+    position: relative;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 20px;
+    color: white;
+    font-size: max(1vw, 10px);
+}
+
+/* Styles for Exempted h2 that need to be at the center */
+.center {
+    text-align: center;
+}
+
+/* Styles for tables used in Secondary Pages */ 
+.full table{
+    border-collapse: collapse;
+}
+
+.full table caption{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: center;
+    color: #d6409c;
+    border: 3px solid #590D22;
+    padding: 0.5em;
+    background-color: #FFF0F3;
+    font-size: max(1vw, 10px)
+}
+
+.full table th, table td{
+    padding: 0.5em;
+    text-align: justify; 
+    border: 3px solid #590D22; 
+    background-color:#A4133C;
+    font-size: max(1vw, 10px);
+    color: #ffffff;
+}
+
+.full table th{
+    background-color:#800F2F;
+}
+/* ~~ End of Styles for Secondary Pages ~~ */
+

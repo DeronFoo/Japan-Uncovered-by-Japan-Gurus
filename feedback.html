@@ -1,0 +1,185 @@
+<!DOCTYPE html>  
+<html lang="en">    
+	<!-- Description: Japan Uncovered's Feedback Form -->
+	<!-- Author: Japan Gurus -->
+	<!-- Date: 1 May 2023 -->
+	<!-- Validated: Ok 20 May 2023 -->
+<head>    
+	<title>Japan Uncovered: Feedback Form</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Japan Gurus">
+	<meta name="description" content="Japan Uncovered Feedback Form">
+	<meta name="keywords" content="Japan, Uncovered, Feedback, Form">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+    <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+    the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>    
+
+<body>
+    <header>
+        <p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+			<!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+                    <li><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html" class="active">Feedback</a>
+        </nav> 
+    </header>
+
+	<article class="form">
+        <h1>Feedback Form</h1>
+		<!-- Feedback Form Structured Using Table Elements -->
+		<form name="feedback" method="post" action="mailto:japan_gurus123@yahoo.com" enctype="text/plain">
+			<fieldset>
+				<legend>Personal information</legend>
+				<table>
+					<tr>
+						<td class="qs">
+							<label for="name">Name*</label>
+						</td>
+						<td class="ans">
+							<input type="text" id="name" name="Name " placeholder=" Include your first and last name" size="40" required="required" autocomplete="off">
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">
+							<label for="email">Email*</label>
+						</td>
+						<td class="ans">
+							<input type="email" id="email" name="Email Address " placeholder=" Please enter your email address" size="40" required="required" autocomplete="off">
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">Date of visit*</td>
+						<td class="ans">
+							<input type="date" name="Date of visit " required="required">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Questionnaire</legend>
+				<table>
+					<tr>
+						<td class="qs">Did you achieve your goal of visit?</td>
+						<td class="ans">
+							<input type="radio" id="yes" name="Fulfilment of Goal " value=" Yes">
+							<label for="yes">Yes</label>
+							<input type="radio" id="partially" name="Fulfilment of Goal " value=" Partially">
+							<label for="partially">Partially</label>
+							<input type="radio" id="no" name="Fulfilment of Goal " value=" No" >
+							<label for="no">No</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">What were the reasons of your visit?</td>
+						<td class="ans">
+							<input type="checkbox" id="interest" name="Reason of Visit " value=" I was interested in Japan">
+							<label for="interest">I was interested in Japan</label>
+							<br>
+							<input type="checkbox" id="look" name="Reason of Visit " value=" I was looking for a country to travel to">
+							<label for="look">I was looking for a country to travel to</label>
+							<br>
+							<input type="checkbox" id="plan" name="Reason of Visit " value=" I wanted to plan my travel">
+							<label for="plan">I wanted to plan my travel</label>
+							<br>
+							<input type="checkbox" id="rec" name="Reason of Visit " value=" I was recommended by others">
+							<label for="rec">I was recommended by others</label>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">What was the main reason if you did not fully achieve your goal?</td>
+						<td class="ans">
+							<select name="Main reason unable to fully achieve visit goal ">
+								<option value=" None">None</option>
+								<option value=" It was difficult to navigate the website">It was difficult to navigate the website</option>
+								<option value=" The information was lacking">The information was lacking</option>
+								<option value=" The information was boring">The information was boring</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="qs">Rate your overall experience on a 1-5 scale with 5 being very satisfied and 1 being not satisfied at all.</td>
+						<td class="ans">
+							<label> Ratings (1 - 5):</label><br>
+							<input type="range" class="slider" name="Ratings (1 - 5) " min="1" max="5" value="3" list="markers">
+							<datalist id="markers">
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+								<option value="5"></option>
+							</datalist>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Suggestions</legend>
+				<table>
+					<tr>
+						<td class="qs">
+							<label for="suggestion">What improvements or changes would you suggest to further enhance the website?</label>
+						</td>
+						<td class="ans">
+							<textarea name="Suggestions for Improvements " id="suggestion" rows="5" cols="30" placeholder=" Write your suggestions here..."></textarea>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<p><input type="submit" value="Submit">
+				<input type="reset" value="Reset"></p>
+		</form>
+	</article>
+
+    <footer>
+		<!-- Footer Content -->
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="index.html#outline">Outline</a></li>
+                <li><a href="feedback.html">Back to Top</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 20 May 2023</p>
+        </div>
+    </footer> 
+    <!-- link to external javascript file  -->
+    <script src="script.js"></script> 
+</body>
+</html>

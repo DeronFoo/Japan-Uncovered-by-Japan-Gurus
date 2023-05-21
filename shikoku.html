@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Description: Shikoku --> 
+    <!-- Author: Japan Gurus --> 
+    <!-- Date: 14 May 2023 --> 
+    <!-- Validated: Ok 21 May 2023 -->
+<head>
+    <title>Japan Uncovered: Shikoku</title>
+    <meta charset="utf-8"> 
+    <meta name="author" content="Japan Gurus"> 
+    <meta name="description" content="shikoku"> 
+    <meta name="keywords" content="shikoku, japan">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+    <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+    the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>	
+
+<body>
+	<header>
+		<p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+            <!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select active-dropdown">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+					<li class="active"><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html">Feedback</a>
+        </nav> 
+	</header>
+
+    <article class="content">
+        <h1>Shikoku</h1>
+        <div class="slide-show">
+            <!--This div stores elements to be shown in slideshow-->
+            <div class="slide-show-elements">
+                <!--This div stores progress bar above the slideshow to show the currently showed picture's sequence -->
+                <div class="progress-bar">
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                    <span class="bullet"></span>
+                </div>
+                <!--This div stores the previous & next buttons -->
+                <div class="navigation">
+                    <button class="slide-previous" onclick="Slideshow(-1)">&#10094;</button>
+                    <button class="slide-next" onclick="Slideshow(+1)">&#10095;</button>
+                </div>
+                <img src="images/shikoku/matsuyama.jpg" class="slideshow" alt="Picture 1 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/thumb/238/XYZeXYZe5501_375.jpg-->
+                <img src="images/shikoku/whirlpools_in_naruto.jpg" class="slideshow" alt="Picture 2 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g20/7852_01.jpg -->
+                <img src="images/shikoku/awa_odori.jpg" class="slideshow" alt="Picture 3 of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe6340_1680.jpg -->
+                <img src="images/shikoku/ritsurin_koen.jpg" class="slideshow" alt="Picture 4 of of slideshow">
+                <!-- image obtained from https://www.japan-guide.com/g20/6342_01.jpg -->
+            </div>
+        </div>
+        <div class=" slides content-one">
+            <div class="full">
+                <h2>Introduction</h2>
+                <p>
+                    One of Japan's four major islands, along with Hokkaido, Honshu, Shikoku, and Kyushu, is Shikoku. Between the Seto Inland Sea and the Pacific Ocean, the island is situated. There are four prefectures: Kochi, Kagawa, Ehime, and Tokushima. Political, economic, and cultural relations between Tokushima and the Kansai area of Honshu, which is home to cities like Osaka and Kyoto, are strong.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/list/e1107.html -->
+            </div>
+            <div class="full">
+                <div class="half">
+                    <h2>Matsuyama</h2>
+                    <p>
+                        Shikoku's major city and the seat of the Ehime Prefecture is Matsuyama. Matsuyamajo, a stunning, authentic castle, is located in the centre of the city. The cityscape and the Seto Inland Sea may both be seen from the castle's summit vantage point.<br><br>
+                        The location of the well-known novel "Botchan" by Natsume Soseki, which takes place in the city, is another claim to renown. The story, which is frequently studied as required reading in Japanese schools, is set amid the violent Meiji Restoration and takes place in Matsuyama. The city gained notoriety throughout Japan thanks in part to Natsume's book. One of Matsuyama's top tourist destinations is Dogo Onsen, which is frequently featured in "Botchan". Dogo Onsen, one of Japan's first hot spring resorts, is situated on the city's northeastern outskirts.
+                    </p>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e5500.html -->
+                </div>
+                <div class="half2">
+                    <img height="380" src="images/shikoku/matsuyama.jpg" alt="Matsuyama">
+                    <!-- image obtained from https://www.japan-guide.com/thumb/238/XYZeXYZe5501_375.jpg -->
+                </div>
+            </div>
+        </div>
+        <div class=" slides content-two">
+            <div class="full">
+                <div class="half">
+                    <h2>Whirlpools</h2>
+                    <p>
+                      The Naruto whirlpools, which are found along the Shikoku coast of the Naruto Strait, are caused by the enormous amounts of water that move between the Seto Inland Sea and the Pacific Ocean at high and low tides, as well as the distinctive underwater geography of the strait's small channel.<br><br>
+                      The whirlpools can usually be seen once in the morning and once in the afternoon for an hour or two, depending on the tides, which vary about every six hours. The magnitude of the whirlpools varies according to how strong the tides are. They peak at spring tides, which happen every two weeks when the sun, earth, and moon are lined up, and are often larger in the summer than the winter.
+                    </p><br><br>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e7852.html -->
+                </div>
+                <div class="half2">
+                    <img height="380" src="images/shikoku/whirlpools_in_naruto.jpg" alt="Whirlpools in Naruto">
+                    <!-- image obtained from https://www.japan-guide.com/g20/7852_01.jpg -->
+                </div>
+            </div>
+            <div class="full">
+                <h2>Summary</h2>
+                <p>
+                    Shikoku, the smallest and least populated of Japan's four main islands, is renowned for both its significant cultural landmarks, such as the 88 Temple Pilgrimage, as well as its stunning natural scenery, which includes mountains, rivers, and picturesque coasts. Agriculture, forestry, and fishing are the main industries, while paper, chemicals, and electronics are only a few examples of the products that are manufactured in this country. Three significant cities—Matsuyama, Takamatsu, and Kochi—each have their own special attractions, like as hot springs, old castles, and lovely beaches.
+                </p>
+                <!-- information paraphrased from https://www.britannica.com/place/Shikoku-island-Japan -->
+            </div>
+        </div>
+    </article>
+	
+	<footer>
+        <!-- Footer Content -->
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#goals">Goals</a></li>
+                <li><a href="index.html#outline">Outline</a></li>
+                <li><a href="shikoku.html">Back to Top</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 21 May 2023</p>
+        </div>
+    </footer>
+    <!-- link to external javascript file  -->
+    <script src="script.js"></script> 
+</body>
+</html>	

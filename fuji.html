@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- Description: Mount Fuji --> 
+	<!-- Author: Japan Gurus --> 
+	<!-- Date: 4 May 2023 --> 
+	<!-- Validated: Ok 21 May 2023 -->
+<head>
+	<title>Japan Uncovered: Mount Fuji</title>
+	<meta charset="utf-8"> 
+	<meta name="author" content="Japan Gurus"> 
+	<meta name="description" content="Mount Fuji"> 
+	<meta name="keywords" content="mount,fuji,mountain,trail,japan">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0"> 
+    <!-- This metadata sets the width of the page equal to the screen-width of the device and 
+    the initial zoom level to 1.0 when the page is first loaded by the browser. -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>	
+
+<body>
+	<header>
+		<p><img src="images/logo.png" alt="Japan Uncovered Logo"></p>
+        <!-- The logo is generated from https://turbologo.com/designs/24484868 -->
+        <nav>
+            <!-- Dropdown Menu -->
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Regions</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="hokkaido.html">Hokkaido</a></li>
+                    <li><a href="tohoku.html">Tohoku</a></li>
+                    <li><a href="kanto.html">Kanto</a></li>
+                    <li><a href="chubu.html">Chubu</a></li>
+                    <li><a href="kansai.html">Kansai</a></li>
+                    <li><a href="chugoku.html">Chugoku</a></li>
+                    <li><a href="shikoku.html">Shikoku</a></li>
+                    <li><a href="kyushu.html">Kyushu</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <div class="select active-dropdown">
+                    <span class="selected">Destinations</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu menu-long">
+                    <li><a href="tokyo.html">Tokyo</a></li>
+                    <li><a href="kyoto.html">Kyoto</a></li>
+                    <li><a href="naoshima.html">Naoshima</a></li>
+                    <li class="active"><a href="fuji.html">Mt.Fuji</a></li>
+                    <li><a href="hiroshima.html">Hiroshima</a></li>
+                    <li><a href="osaka.html">Osaka</a></li>
+                </ul>
+            </div>
+            <a href="feedback.html">Feedback</a>
+        </nav> 
+	</header>
+
+	<article class="content">
+		<h1>Mount Fuji</h1>
+		<div class="slide-show">
+			<!--This div stores elements to be shown in slideshow-->
+			<div class="slide-show-elements">
+				<!--This div stores progress bar above the slideshow to show the currently showed picture's sequence -->
+				<div class="progress-bar">
+					<span class="bullet"></span>
+					<span class="bullet"></span>
+					<span class="bullet"></span>
+					<span class="bullet"></span>
+				</div>
+				<!--This div stores the previous & next buttons -->
+				<div class="navigation">
+					<button class="slide-previous" onclick="Slideshow(-1)">&#10094;</button>
+					<button class="slide-next" onclick="Slideshow(+1)">&#10095;</button>
+				</div>
+				<img src="images/fuji/fuji1.jpg" class="slideshow" alt="Picture 1 of slideshow">
+				<!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe2172_1680.jpg -->
+				<img src="images/fuji/fuji2.jpg" class="slideshow" alt="Picture 2 of slideshow">
+				<!-- image obtained from https://www.japan-guide.com/g18/6901_04.jpg -->
+				<img src="images/fuji/fuji3.jpg" class="slideshow" alt="Picture 3 of slideshow">
+				<!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe6900_1680.jpg -->
+				<img src="images/fuji/fuji4.jpg" class="slideshow" alt="Picture 4 of slideshow">
+				<!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe5200_1680.jpg -->
+			</div>
+		</div>
+        <div class=" slides content-one">
+            <div class="full">
+                <h2>Introduction</h2>
+                <p>
+                    With 3776 metres, Mount Fuji (also known as Fujisan, 富士山) is the tallest peak in Japan. It is hardly unexpected that the almost flawlessly sculpted volcano has long been revered as a sacred mountain and has had immense appeal among both artists and ordinary people.<br><br>
+                    The most recent eruption of Mount Fuji, which is an active volcano, occurred in 1707. On clear days, it can be seen from Tokyo and Yokohama since it sits on the boundary of Yamanashi and Shizuoka prefectures.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/e/e2172.html -->
+            </div>
+            <div class="full">
+                <div class="half">
+                    <h2>Fujinomiya</h2>
+                    <p>
+                        Shizuoka Prefecture's Fujinomiya (富士宮)  is a city located on Mount Fuji's southwest flank. The area's most significant and well-known shrine, Fujinomiya Sengen Shrine, which serves as the customary starting place for the ascent of the mountain, is where the city got its name. Despite being one of the fastest and busiest ways to the summit, many people still begin their ascent from Fujinomiya's 5th Station. <br><br>
+                        Apart from that, the Shiraito Falls, one of Japan's most stunning waterfalls, are also located in Fujinomiya. On the approach to the Fuji Five Lakes region on the northern side of the mountain, the falls are located on the outskirts of the city.
+                    </p>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e6365.html -->
+                </div>
+                <div class="half2">
+                    <img src="images/fuji/Fujinomiya.jpg" alt="Fujinomiya">
+                    <!-- image obtained from https://www.japan-guide.com/thumb/XYZeXYZe6365_1680.jpg -->
+                </div>
+            </div>
+        </div>
+        <div class=" slides content-two">
+            <div class="full">
+                <div class="half">
+                <h2>Fujinomiya 5th Station</h2>
+                <p>
+                    Out of the four 5th stations on Mount Fuji, the Fujinomiya 5th Station (富士宮五合目, Fujinmiya Gogme) is the second most populated and developed. The Fujisan Skyline, a winding route that leads to the fifth station, used to be a toll road but is now free to use. The Fujinomiya 5th Station, at 2400 metres above sea level, is the highest of the five stations, and the Fujinomiya Trail is the fastest ascent of Mount Fuji. It takes 4–7 hours to ascend, and 2-6 hours to descend. Keep in mind that the route does not provide views of the dawn prior to arriving at the peak.<br><br>
+                    The Fujinomiya 5th Station features a store, café, and restrooms in addition to many parking spots. This is the final opportunity for climbers to purchase food, water, oxygen, and other supplies at affordable prices before the prices soar at higher heights, just like the stores located at the previous 5th stations.
+                </p><br><br>
+                <!-- information paraphrased from https://www.japan-guide.com/e/e6930.html -->
+                </div>
+                <div class="half2">
+                    <img height="380" src="images/fuji/Fujinomiya_5th_Station.jpg" alt="Fujinomiya 5th Station">
+                    <!-- image obtained from https://www.japan-guide.com/g20/6930_01.jpg -->
+                </div>
+            </div>
+            <div class="full">
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <p>
+                        In conclusion, Mount Fuji is undoubtedly one of the most famous travel destinations in Japan. Not only because of the picturesque scenario on the summit of the mountain, Mount Fuji also has multiple attractive locations scattering around it such as Hakone and Fuji Five Lakes. However, Mount Fuji is frequently obscured by clouds and low visibility, so you should count yourself lucky if you see the peak clearly. In general, visibility is generally greater in the cooler months of the year compared to the summer and in the early morning and late evening compared to the middle of the day.
+                    </p>
+                    <!-- information paraphrased from https://www.japan-guide.com/e/e2172.html -->
+                </div>
+            </div>
+        </div>
+	</article>
+	
+	<footer>
+        <!-- Footer Content -->
+		<div class="footerNav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html#about">About</a></li>
+				<li><a href="index.html#goals">Goals</a></li>
+				<li><a href="index.html#outline">Outline</a></li>
+				<li><a href="fuji.html">Back to Top</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+		<div class="footerBottom">
+			<p>&copy; <a href="japan_gurus.html">Japan Gurus</a> | Last updated: 21 May 2023</p>
+		</div>
+	</footer>
+	<!-- link to external javascript file  -->
+	<script src="script.js"></script> 
+</body>
+</html>	
